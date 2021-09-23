@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 
-// ±¸Á¶Ã¼ ¹× °ø¿ëÃ¼
+// êµ¬ì¡°ì²´ ë° ê³µìš©ì²´
 typedef struct _user
 {
 	char name[20];
@@ -21,13 +21,13 @@ typedef struct _user
 
 int main()
 {
-	User user[100]; // ÃÖ´ë 100¸í
+	User user[100]; // ìµœëŒ€ 100ëª…
 	char buffer[100];
-	char* ptr; // ÅäÅ«ºĞ¸® °á°ú ÀúÀå
+	char* ptr; // í† í°ë¶„ë¦¬ ê²°ê³¼ ì €ì¥
 
-	int bmin = -1; //ÃÖÀú±¸¸ÅÀÚ
+	int bmin = -1; //ìµœì €êµ¬ë§¤ì
 	int bmax = -1;
-	int smin = -1; //ÃÖ´ëÆÇ¸ÅÀÚ
+	int smin = -1; //ìµœëŒ€íŒë§¤ì
 	int smax = -1;
 	int i;
 	int total = 0;
@@ -38,7 +38,7 @@ int main()
 	double Savg = 0; // sellaverage
 
 
-	printf("°í°´ Á¤º¸¸¦ ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À (<ÀÌ¸§> <°í°´ À¯Çü> <ÀüÈ­¹øÈ£> <±İ¾×>):\n");
+	printf("ê³ ê° ì •ë³´ë¥¼ ì…ë ¥í•´ ì£¼ì‹­ì‹œì˜¤ (<ì´ë¦„> <ê³ ê° ìœ í˜•> <ì „í™”ë²ˆí˜¸> <ê¸ˆì•¡>):\n");
 	while (1)
 	{
 		gets_s(buffer, 100);
@@ -154,25 +154,25 @@ int main()
 
 	if (bmax == -1)
 	{
-		printf("ÃÖÀú ±¸¸ÅÀÚ : %(c)\n", a);
-		printf("ÃÖ°í ±¸¸ÅÀÚ : %(c)\n", a);
-		printf("Æò±Õ ±¸¸Å¾× : 0.0\n");
+		printf("ìµœì € êµ¬ë§¤ì : %(c)\n", a);
+		printf("ìµœê³  êµ¬ë§¤ì : %(c)\n", a);
+		printf("í‰ê·  êµ¬ë§¤ì•¡ : 0.0\n");
 	}
 	else {
-		printf("ÃÖÀú ±¸¸ÅÀÚ : %s %d\n", user[bmin].name, user[bmin].u.buy);
-		printf("ÃÖ°í ±¸¸ÅÀÚ : %s %d\n", user[bmax].name, user[bmax].u.buy);
-		printf("Æò±Õ ±¸¸Å¾× : %.1lf\n", Bavg);
+		printf("ìµœì € êµ¬ë§¤ì : %s %d\n", user[bmin].name, user[bmin].u.buy);
+		printf("ìµœê³  êµ¬ë§¤ì : %s %d\n", user[bmax].name, user[bmax].u.buy);
+		printf("í‰ê·  êµ¬ë§¤ì•¡ : %.1lf\n", Bavg);
 	}
 	if (smax == -1)
 	{
-		printf("ÃÖÀú ÆÇ¸ÅÀÚ : %(c)\n", a);
-		printf("ÃÖ°í ÆÇ¸ÅÀÚ : %(c)\n", a);
-		printf("Æò±Õ ÆÇ¸Å¾× : 0.0\n");
+		printf("ìµœì € íŒë§¤ì : %(c)\n", a);
+		printf("ìµœê³  íŒë§¤ì : %(c)\n", a);
+		printf("í‰ê·  íŒë§¤ì•¡ : 0.0\n");
 	}
 	else {
-		printf("ÃÖÀú ÆÇ¸ÅÀÚ : %s %d\n", user[smin].name, user[smin].u.sell);
-		printf("ÃÖ°í ÆÇ¸ÅÀÚ : %s %d\n", user[smax].name, user[smax].u.sell);
-		printf("Æò±Õ ÆÇ¸Å¾× : %.1lf\n", Savg);
+		printf("ìµœì € íŒë§¤ì : %s %d\n", user[smin].name, user[smin].u.sell);
+		printf("ìµœê³  íŒë§¤ì : %s %d\n", user[smax].name, user[smax].u.sell);
+		printf("í‰ê·  íŒë§¤ì•¡ : %.1lf\n", Savg);
 	}
 
 	return 0;
